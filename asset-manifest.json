@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jjs-poetry/static/css/main.c73ac2c0.css",
-    "main.js": "/jjs-poetry/static/js/main.d5b7feec.js",
+    "main.js": "/jjs-poetry/static/js/main.cb04e4ce.js",
     "static/js/787.a660e62d.chunk.js": "/jjs-poetry/static/js/787.a660e62d.chunk.js",
     "index.html": "/jjs-poetry/index.html",
     "main.c73ac2c0.css.map": "/jjs-poetry/static/css/main.c73ac2c0.css.map",
-    "main.d5b7feec.js.map": "/jjs-poetry/static/js/main.d5b7feec.js.map",
+    "main.cb04e4ce.js.map": "/jjs-poetry/static/js/main.cb04e4ce.js.map",
     "787.a660e62d.chunk.js.map": "/jjs-poetry/static/js/787.a660e62d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c73ac2c0.css",
-    "static/js/main.d5b7feec.js"
+    "static/js/main.cb04e4ce.js"
   ]
 }
