@@ -21,6 +21,7 @@ export const SunsetBackground = (props: React.PropsWithChildren & BoxProps) => {
         width: '100vw', // Fixed viewport width
         height: '100vh', // Fixed viewport height
         overflow: 'hidden', // Prevent scrolling caused by overflowing content
+        background: '#021C35',
         ...props.sx
       }}
     >
@@ -45,21 +46,28 @@ export const SunsetBackground = (props: React.PropsWithChildren & BoxProps) => {
       >
 
         {/* Moving Sun */}
-        <Box
-          sx={{
-            zIndex: 3,
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundImage: 'url("/SunsetVectorSunOnly.svg")',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center center',
-            animation: `${moveSunUpAnimation} 5s forwards`
-          }}
-        />
+        <Box sx={{
+          overflow: 'hidden',
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+        }}>
+          <Box
+            sx={{
+              zIndex: 3,
+              position: 'relative',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundImage: 'url("/SunsetVectorSunOnly.svg")',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center center',
+              animation: `${moveSunUpAnimation} 5s forwards`
+            }}
+          />
+        </Box>
         {/* Mountains only image to cover the moon*/}
         <Box
           sx={{
