@@ -1,5 +1,8 @@
 import { Box, BoxProps } from "@mui/material";
 import { keyframes } from '@emotion/react';
+import SunsetVectorNoSun from '../svgs/SunsetVectorNoSun.svg';
+import SunsetVectorSunOnly from '../svgs/SunsetVectorSunOnly.svg';
+import SunsetVectorBlackCloudsOnly from '../svgs/SunsetVectorBlackCloudsOnly.svg';
 
 const moveSunUpAnimation = keyframes`
   0% {
@@ -36,7 +39,7 @@ export const SunsetBackground = (props: React.PropsWithChildren & BoxProps) => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundImage: 'url("/SunsetVectorNoSun.svg")',
+          backgroundImage: SunsetVectorNoSun,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
@@ -60,7 +63,7 @@ export const SunsetBackground = (props: React.PropsWithChildren & BoxProps) => {
               left: 0,
               width: '100%',
               height: '100%',
-              backgroundImage: 'url("/SunsetVectorSunOnly.svg")',
+              backgroundImage: SunsetVectorSunOnly,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center center',
@@ -77,7 +80,7 @@ export const SunsetBackground = (props: React.PropsWithChildren & BoxProps) => {
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundImage: 'url("/SunsetVectorBlackCloudsOnly.svg")',
+            backgroundImage: SunsetVectorBlackCloudsOnly,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center'
