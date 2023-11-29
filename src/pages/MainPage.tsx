@@ -141,7 +141,7 @@ export const MainPage = () => {
                     paddingTop: '20vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='/Yesterday.txt' title='Yesterday' />
+                    <GetPoemComponent path='./Yesterday.txt' title='Yesterday' />
                 </Box>
             </Grid>
             {/* In The Green Poem */}
@@ -156,7 +156,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='/InTheGreen.txt' title='In The Green' />
+                    <GetPoemComponent path='./InTheGreen.txt' title='In The Green' />
                 </Box>
             </Grid>
             {/* Just As Important */}
@@ -171,7 +171,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='/JustAsImportant.txt' title='Just As Important' />
+                    <GetPoemComponent path='./JustAsImportant.txt' title='Just As Important' />
                 </Box>
             </Grid>
             {/* ButIfYouDoImSorry */}
@@ -186,7 +186,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='/ButIfYouDoImSorry.txt' title="But If You Do I'm Sorry" />
+                    <GetPoemComponent path='./ButIfYouDoImSorry.txt' title="But If You Do I'm Sorry" />
                 </Box>
             </Grid>
             {/* GreyMist */}
@@ -201,7 +201,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='/GreyMist.txt' title="Grey Mist" />
+                    <GetPoemComponent path='./GreyMist.txt' title="Grey Mist" />
                 </Box>
             </Grid>
         </Grid>
