@@ -7,13 +7,7 @@ import { MainPage } from './pages/MainPage';
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-      <Route path="/" >
-					<Route index element={<MainPage />} />
-				</Route>
-      </Routes>
-    </BrowserRouter >
+    <MainPage />
     </>
   );
 }
