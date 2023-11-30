@@ -25,7 +25,16 @@ type GetPoemComponentProps = {
     title: string;
 };
 
+enum Spaces {
+    NormalSpace = '<Space22>',
+    LargeSpace = '<Space36>',
+    SmallSpace = '<Space7>'
+}
+
 const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
+
+    // Everytime setFileContent is given a String, the contents in fileContent are updated. The type is  inferenced from the intial value
+    // Since useState('') sets fileContent to an empty String, the program knows it's of type String.
     const [fileContent, setFileContent] = useState('');
 
     const headerStyle = {
@@ -37,6 +46,19 @@ const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
         whiteSpace: 'pre-line',
         padding: '1rem',
     };
+
+    const poemLines: String[] = fileContent.split('\n');
+
+    const poemComponents = [];
+
+    for (let i: number = 0; i < poemLines.length; i++) {
+        if (poemLines[i] != '') {
+
+        }
+        poemComponents.push(<Typography key={i}>{poemLines[i]}</Typography>);
+    }
+
+
 
     useEffect(() => {
         fetch(path) // ex: '/path/to/your/file.txt'
