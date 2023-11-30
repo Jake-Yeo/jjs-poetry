@@ -25,16 +25,7 @@ type GetPoemComponentProps = {
     title: string;
 };
 
-enum Spaces {
-    NormalSpace = '<Space22>',
-    LargeSpace = '<Space36>',
-    SmallSpace = '<Space7>'
-}
-
 const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
-
-    // Everytime setFileContent is given a String, the contents in fileContent are updated. The type is  inferenced from the intial value
-    // Since useState('') sets fileContent to an empty String, the program knows it's of type String.
     const [fileContent, setFileContent] = useState('');
 
     const headerStyle = {
@@ -46,19 +37,6 @@ const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
         whiteSpace: 'pre-line',
         padding: '1rem',
     };
-
-    const poemLines: String[] = fileContent.split('\n');
-
-    const poemComponents = [];
-
-    for (let i: number = 0; i < poemLines.length; i++) {
-        if (poemLines[i] != '') {
-
-        }
-        poemComponents.push(<Typography key={i}>{poemLines[i]}</Typography>);
-    }
-
-
 
     useEffect(() => {
         fetch(path) // ex: '/path/to/your/file.txt'
@@ -143,13 +121,28 @@ export const MainPage = () => {
                 <SunsetBackground>
                     <Box sx={{ animation: `${moveTextUpAnimation} 5s forwards`, }}>
                         <Typography variant="h1" sx={headerStyle}>
-                            My Pallet of Words
+                            Sunset Poetry
                         </Typography >
                         <Typography variant="h2" sx={authorTextStyle}>
                             By: Jake Yeo
                         </Typography >
                     </Box>
                 </SunsetBackground>
+            </Grid>
+            {/* Yesterday Poem */}
+            <Grid item>
+                <Box sx={{
+                    width: '100vw',
+                    minHeight: '100vh',
+                    color: '#FDFACD',
+                    background: '#021C35',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    paddingTop: '20vh',
+                    paddingBottom: '10vh',
+                }}>
+                    <GetPoemComponent path='./Yesterday.txt' title='Yesterday' />
+                </Box>
             </Grid>
             {/* In The Green Poem */}
             <Grid item>
@@ -166,7 +159,7 @@ export const MainPage = () => {
                     <GetPoemComponent path='./InTheGreen.txt' title='In The Green' />
                 </Box>
             </Grid>
-            {/* Homes */}
+            {/* Just As Important */}
             <Grid item>
                 <Box sx={{
                     width: '100vw',
@@ -178,7 +171,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='./Homes.txt' title='Homes' />
+                    <GetPoemComponent path='./JustAsImportant.txt' title='Just As Important' />
                 </Box>
             </Grid>
             {/* ButIfYouDoImSorry */}
@@ -196,7 +189,7 @@ export const MainPage = () => {
                     <GetPoemComponent path='./ButIfYouDoImSorry.txt' title="But If You Do I'm Sorry" />
                 </Box>
             </Grid>
-            {/* If Only It Were The Afternoon */}
+            {/* GreyMist */}
             <Grid item>
                 <Box sx={{
                     width: '100vw',
@@ -208,7 +201,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='./IfOnlyItWereTheAfternoon.txt' title="If Only It Were The Afternoon" />
+                    <GetPoemComponent path='./GreyMist.txt' title="Grey Mist" />
                 </Box>
             </Grid>
         </Grid>
