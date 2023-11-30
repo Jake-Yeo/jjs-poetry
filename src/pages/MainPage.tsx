@@ -121,28 +121,13 @@ export const MainPage = () => {
                 <SunsetBackground>
                     <Box sx={{ animation: `${moveTextUpAnimation} 5s forwards`, }}>
                         <Typography variant="h1" sx={headerStyle}>
-                            Sunset Poetry
+                            My Pallet of Words
                         </Typography >
                         <Typography variant="h2" sx={authorTextStyle}>
                             By: Jake Yeo
                         </Typography >
                     </Box>
                 </SunsetBackground>
-            </Grid>
-            {/* Yesterday Poem */}
-            <Grid item>
-                <Box sx={{
-                    width: '100vw',
-                    minHeight: '100vh',
-                    color: '#FDFACD',
-                    background: '#021C35',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    paddingTop: '20vh',
-                    paddingBottom: '10vh',
-                }}>
-                    <GetPoemComponent path='./Yesterday.txt' title='Yesterday' />
-                </Box>
             </Grid>
             {/* In The Green Poem */}
             <Grid item>
@@ -159,7 +144,7 @@ export const MainPage = () => {
                     <GetPoemComponent path='./InTheGreen.txt' title='In The Green' />
                 </Box>
             </Grid>
-            {/* Just As Important */}
+            {/* Homes */}
             <Grid item>
                 <Box sx={{
                     width: '100vw',
@@ -171,7 +156,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='./JustAsImportant.txt' title='Just As Important' />
+                    <GetPoemComponent path='./Homes.txt' title='Homes' />
                 </Box>
             </Grid>
             {/* ButIfYouDoImSorry */}
@@ -189,7 +174,7 @@ export const MainPage = () => {
                     <GetPoemComponent path='./ButIfYouDoImSorry.txt' title="But If You Do I'm Sorry" />
                 </Box>
             </Grid>
-            {/* GreyMist */}
+            {/* If Only It Were The Afternoon */}
             <Grid item>
                 <Box sx={{
                     width: '100vw',
@@ -201,7 +186,7 @@ export const MainPage = () => {
                     paddingTop: '10vh',
                     paddingBottom: '10vh',
                 }}>
-                    <GetPoemComponent path='./GreyMist.txt' title="Grey Mist" />
+                    <GetPoemComponent path='./IfOnlyItWereTheAfternoon.txt' title="If Only It Were The Afternoon" />
                 </Box>
             </Grid>
         </Grid>
