@@ -31,6 +31,7 @@ enum Spaces {
     SmallSpace = '<Space7>'
 }
 
+
 const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
 
     // Everytime setFileContent is given a String, the contents in fileContent are updated. The type is  inferenced from the intial value
@@ -56,21 +57,21 @@ const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
             poemComponents.push(<Box key={i}
                 sx={{
                     width: '100vw',
-                    height: '200px',
+                    height: '100vh',
                 }}
             />)
         } else if (poemLines[i] == Spaces.LargeSpace) {
             poemComponents.push(<Box key={i}
                 sx={{
                     width: '100vw',
-                    height: '300px',
+                    height: '100vh',
                 }}
             />)
         } else if (poemLines[i] == Spaces.SmallSpace) {
             poemComponents.push(<Box key={i}
                 sx={{
                     width: '100vw',
-                    height: '100px',
+                    height: '30vh',
                 }}
             />)
         } else {
