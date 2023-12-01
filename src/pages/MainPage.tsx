@@ -52,10 +52,34 @@ const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
     const poemComponents = [];
 
     for (let i: number = 0; i < poemLines.length; i++) {
-        if (poemLines[i] != '') {
-
+        if (poemLines[i] == Spaces.NormalSpace) {
+            poemComponents.push(<Box key={i}
+                sx={{
+                    width: '100vw',
+                    height: '200px',
+                }}
+            />)
+        } else if (poemLines[i] == Spaces.LargeSpace) {
+            poemComponents.push(<Box key={i}
+                sx={{
+                    width: '100vw',
+                    height: '300px',
+                }}
+            />)
+        } else if (poemLines[i] == Spaces.SmallSpace) {
+            poemComponents.push(<Box key={i}
+                sx={{
+                    width: '100vw',
+                    height: '100px',
+                }}
+            />)
+        } else {
+            poemComponents.push(<Typography key={i}
+                variant="body1"
+                sx={headerStyle}>
+                {poemLines[i]}
+            </Typography>);
         }
-        poemComponents.push(<Typography key={i}>{poemLines[i]}</Typography>);
     }
 
 
@@ -75,9 +99,7 @@ const GetPoemComponent: React.FC<GetPoemComponentProps> = ({ path, title }) => {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <GetPoemTitleComponent title={title} />
-            <Typography variant="body1" sx={headerStyle}>
-                {fileContent}
-            </Typography>
+            {poemComponents}
         </Box>
     );
 }
